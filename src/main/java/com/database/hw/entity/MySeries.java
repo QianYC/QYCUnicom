@@ -11,16 +11,19 @@ import javax.persistence.Id;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Series {
+/**
+ * 套餐
+ */
+public class MySeries {
     @Id
     private long id;
     private String name;
     private int price;
-    private String type;
+    private String stype;
     //流量
-    private double data;
+    private double sdata;
     //通话时间
-    private int call;
+    private int scall;
     //短信条数
     private int message;
 
@@ -29,12 +32,12 @@ public class Series {
     //无限量套餐，比如无限流量、无限通话时间等
     public static final String TYPE_INFINITE = "INFINITE";
 
-    public Series(String name, int price, String type, double data, int call, int message) {
+    public MySeries(String name, int price, String stype, double sdata, int scall, int message) {
         this.name = name;
         this.price = price;
-        this.type = type;
-        this.data = data;
-        this.call = call;
+        this.stype = stype;
+        this.sdata = sdata;
+        this.scall = scall;
         this.message = message;
     }
 }
